@@ -1,259 +1,571 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Toby Crust — CV</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{
-  --paper:#EDEFF2;
-  --ink:#0B0E12;
-  --ink-soft:#5C6672;
-  --rule:#C9CFD6;
-  --accent:#FF4D2E;
-  --depth:#1B3A6B;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%}
-body{
-  background:#DDE1E6;
-  color:var(--ink);
-  font-family:"Inter Tight",system-ui,-apple-system,Segoe UI,sans-serif;
-  font-size:10.2pt;
-  line-height:1.45;
-  padding:28px 16px;
-}
-.sheet{
-  width:210mm;
-  min-height:297mm;
-  margin:0 auto;
-  background:var(--paper);
-  padding:18mm 16mm 14mm;
-  box-shadow:0 1px 0 #fff inset, 0 18px 50px rgba(11,14,18,.22);
-  position:relative;
-}
-/* ---- signature: offset depth planes behind the name ---- */
-.mast{position:relative;padding-bottom:10mm;margin-bottom:8mm;border-bottom:1.5px solid var(--ink)}
-.planes{position:absolute;inset:auto auto 12mm 0;width:100%;height:0}
-.name{
-  font-family:"Bricolage Grotesque",Impact,sans-serif;
-  font-weight:800;
-  font-size:44pt;
-  line-height:.92;
-  letter-spacing:-.02em;
-  text-transform:uppercase;
-  position:relative;
-  display:inline-block;
-}
-.name .sur{font-weight:400;color:var(--ink-soft)}
-.name::before,.name::after{
-  content:attr(data-echo);
-  position:absolute;left:0;top:0;
-  z-index:-1;
-  font-weight:800;
-  -webkit-text-stroke:1px var(--rule);
-  color:transparent;
-}
-.name::before{transform:translate(6px,5px)}
-.name::after{transform:translate(12px,10px);-webkit-text-stroke-color:#DCE0E5}
-.tag{
-  margin-top:5mm;
-  font-family:"JetBrains Mono",ui-monospace,monospace;
-  font-size:8pt;letter-spacing:.14em;text-transform:uppercase;color:var(--depth);
-}
-.contact{
-  margin-top:3mm;display:flex;flex-wrap:wrap;gap:0 14px;
-  font-family:"JetBrains Mono",ui-monospace,monospace;font-size:8pt;color:var(--ink-soft);
-}
-.contact a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule)}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toby Crust — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --paper: #EDEFF2;
+      --ink: #0B0E12;
+      --ink-soft: #54606E;
+      --rule: #C9CFD6;
+      --accent: #0062E3;
+      --accent-hover: #004FC4;
+      --depth: #0D2447;
+      --card-bg: #FFFFFF;
+      --badge-bg: #EBF3FE;
+      --badge-text: #0051BF;
+    }
 
-.lede{
-  font-size:11pt;line-height:1.5;max-width:58ch;margin-top:6mm;
-}
-.lede b{font-weight:600}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-h2{
-  font-family:"JetBrains Mono",ui-monospace,monospace;
-  font-size:7.6pt;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--ink-soft);
-  display:flex;align-items:center;gap:10px;
-  margin:9mm 0 4mm;
-}
-h2::after{content:"";flex:1;height:1px;background:var(--rule)}
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
 
-/* ---- project cards: stacked-plane shadow, echoing the depth idea ---- */
-.proj{
-  position:relative;background:#fff;border:1px solid var(--rule);
-  padding:5mm 6mm;margin-bottom:5mm;
-  box-shadow:4px 4px 0 #E2E6EA;
-  break-inside:avoid;page-break-inside:avoid;
-}
-.proj h3{
-  font-family:"Bricolage Grotesque",sans-serif;font-size:14pt;font-weight:600;letter-spacing:-.01em;
-}
-.proj .who{
-  font-family:"JetBrains Mono",monospace;font-size:7.6pt;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--accent);margin-bottom:2mm;
-}
-.proj p{margin-top:2mm;max-width:62ch}
-.stack{
-  margin-top:3mm;display:flex;flex-wrap:wrap;gap:5px;
-}
-.stack span{
-  font-family:"JetBrains Mono",monospace;font-size:7.2pt;
-  border:1px solid var(--rule);padding:1.5px 6px;color:var(--ink-soft);
-}
-.metrics{display:flex;gap:9mm;margin-top:4mm;border-top:1px solid var(--rule);padding-top:3mm}
-.metric .n{font-family:"Bricolage Grotesque",sans-serif;font-size:16pt;font-weight:800;letter-spacing:-.02em}
-.metric .l{font-family:"JetBrains Mono",monospace;font-size:6.8pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
-.todo{color:var(--accent);background:rgba(255,77,46,.08);padding:0 4px}
+    body {
+      background: #DDE1E6;
+      color: var(--ink);
+      font-family: "Inter Tight", system-ui, -apple-system, Segoe UI, sans-serif;
+      font-size: 10.2pt;
+      line-height: 1.45;
+      padding: 28px 16px;
+    }
 
-/* ---- roles ---- */
-.role{display:grid;grid-template-columns:34mm 1fr;gap:6mm;padding:3.5mm 0;border-bottom:1px solid var(--rule);break-inside:avoid}
-.role:last-of-type{border-bottom:0}
-.role .when{font-family:"JetBrains Mono",monospace;font-size:7.8pt;color:var(--ink-soft);padding-top:2px}
-.role .what strong{font-family:"Bricolage Grotesque",sans-serif;font-size:11.5pt;font-weight:600}
-.role .what em{font-style:normal;color:var(--ink-soft)}
-.role ul{margin:2mm 0 0 4mm;max-width:60ch}
-.role li{margin-bottom:1mm}
+    .sheet {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 18mm 16mm 14mm;
+      box-shadow: 0 1px 0 #fff inset, 0 18px 50px rgba(11, 14, 18, .22);
+      position: relative;
+    }
 
-/* ---- skills ---- */
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:5mm}
-.grid h4{font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.14em;text-transform:uppercase;color:var(--depth);margin-bottom:2mm}
-.grid ul{list-style:none;font-size:9.4pt;line-height:1.6}
+    /* ---- signature: offset depth planes behind the name ---- */
+    .mast {
+      position: relative;
+      padding-bottom: 9mm;
+      margin-bottom: 7mm;
+      border-bottom: 1.5px solid var(--ink);
+    }
 
-.foot{display:grid;grid-template-columns:1fr 1fr;gap:8mm;margin-top:8mm;padding-top:4mm;border-top:1.5px solid var(--ink);font-size:9.4pt}
-.foot h4{font-family:"JetBrains Mono",monospace;font-size:7pt;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:2mm}
+    .planes {
+      position: absolute;
+      inset: auto auto 12mm 0;
+      width: 100%;
+      height: 0;
+    }
 
-@media print{
-  body{background:#fff;padding:0}
-  .sheet{box-shadow:none;margin:0;width:auto;min-height:0;padding:12mm 13mm}
-  a{color:var(--ink)}
-}
-@page{size:A4;margin:0}
-@media (max-width:820px){
-  .sheet{width:100%;padding:10mm 7mm}
-  .name{font-size:32pt}
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .role{grid-template-columns:1fr;gap:1mm}
-  .foot{grid-template-columns:1fr}
-}
-</style>
+    .name {
+      font-family: "Bricolage Grotesque", Impact, sans-serif;
+      font-weight: 800;
+      font-size: 44pt;
+      line-height: .92;
+      letter-spacing: -.02em;
+      text-transform: uppercase;
+      position: relative;
+      display: inline-block;
+    }
+
+    .name .sur {
+      font-weight: 400;
+      color: var(--ink-soft);
+    }
+
+    .name::before,
+    .name::after {
+      content: attr(data-echo);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      font-weight: 800;
+      -webkit-text-stroke: 1px var(--rule);
+      color: transparent;
+    }
+
+    .name::before {
+      transform: translate(6px, 5px);
+    }
+
+    .name::after {
+      transform: translate(12px, 10px);
+      -webkit-text-stroke-color: #DCE0E5;
+    }
+
+    .tag {
+      margin-top: 5mm;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 8pt;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .contact {
+      margin-top: 3mm;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 14px;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 8pt;
+      color: var(--ink-soft);
+    }
+
+    .contact a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .contact a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .lede {
+      font-size: 10.8pt;
+      line-height: 1.52;
+      max-width: 62ch;
+      margin-top: 5.5mm;
+      color: #1a202c;
+    }
+
+    .lede b {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    h2 {
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 7.6pt;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--depth);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 8mm 0 3.5mm;
+    }
+
+    h2::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    /* ---- project cards: stacked-plane shadow, echoing the depth idea ---- */
+    .proj {
+      position: relative;
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      padding: 4.5mm 5.5mm;
+      margin-bottom: 4.5mm;
+      box-shadow: 4px 4px 0 #D8DEE4;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .proj h3 {
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-size: 13.5pt;
+      font-weight: 600;
+      letter-spacing: -.01em;
+      color: var(--ink);
+    }
+
+    .proj .who {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 7.6pt;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 1.5mm;
+    }
+
+    .proj p {
+      margin-top: 2mm;
+      max-width: 63ch;
+      font-size: 9.8pt;
+      line-height: 1.44;
+      color: #1e2630;
+    }
+
+    .stack {
+      margin-top: 3mm;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .stack span {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 7.2pt;
+      border: 1px solid #D1D9E2;
+      background: #F8FAFC;
+      padding: 1.5px 6px;
+      color: #384554;
+      border-radius: 2px;
+    }
+
+    .metrics {
+      display: flex;
+      gap: 9mm;
+      margin-top: 3.5mm;
+      border-top: 1px solid var(--rule);
+      padding-top: 2.5mm;
+    }
+
+    .metric .n {
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-size: 15pt;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      color: var(--accent);
+    }
+
+    .metric .l {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 6.8pt;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .highlight {
+      color: var(--accent);
+      background: var(--badge-bg);
+      padding: 0 4px;
+      border-radius: 2px;
+      font-weight: 600;
+    }
+
+    /* ---- roles ---- */
+    .role {
+      display: grid;
+      grid-template-columns: 34mm 1fr;
+      gap: 6mm;
+      padding: 3.2mm 0;
+      border-bottom: 1px solid var(--rule);
+      break-inside: avoid;
+    }
+
+    .role:last-of-type {
+      border-bottom: 0;
+    }
+
+    .role .when {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 7.8pt;
+      color: var(--ink-soft);
+      padding-top: 2px;
+    }
+
+    .role .what strong {
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-size: 11.2pt;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .role .what em {
+      font-style: normal;
+      color: var(--ink-soft);
+      font-size: 9.8pt;
+    }
+
+    .role ul {
+      margin: 1.8mm 0 0 4mm;
+      max-width: 61ch;
+      font-size: 9.6pt;
+    }
+
+    .role li {
+      margin-bottom: 1mm;
+      line-height: 1.42;
+      color: #212934;
+    }
+
+    /* ---- skills ---- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5mm;
+    }
+
+    .grid h4 {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 7pt;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--depth);
+      margin-bottom: 2mm;
+    }
+
+    .grid ul {
+      list-style: none;
+      font-size: 9.2pt;
+      line-height: 1.55;
+      color: #2a3441;
+    }
+
+    .foot {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8mm;
+      margin-top: 7mm;
+      padding-top: 4mm;
+      border-top: 1.5px solid var(--ink);
+      font-size: 9.2pt;
+      color: #2a3441;
+    }
+
+    .foot h4 {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 7pt;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--depth);
+      margin-bottom: 2mm;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+
+      .sheet {
+        box-shadow: none;
+        margin: 0;
+        width: auto;
+        min-height: 0;
+        padding: 12mm 13mm;
+      }
+
+      a {
+        color: var(--ink);
+      }
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media (max-width:820px) {
+      .sheet {
+        width: 100%;
+        padding: 10mm 7mm;
+      }
+
+      .name {
+        font-size: 32pt;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .role {
+        grid-template-columns: 1fr;
+        gap: 1mm;
+      }
+
+      .foot {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div class="sheet">
+  <div class="sheet">
 
-  <header class="mast">
-    <div class="name" data-echo="Toby Crust">Toby <span class="sur">Crust</span></div>
-    <div class="tag">Software Engineer — Web · Real-time 3D · Augmented Reality</div>
-    <div class="contact">
-      <span>Sydney, AU</span>
-      <span>+61 425 843 487</span>
-      <a href="mailto:tobycrust@gmail.com">tobycrust@gmail.com</a>
-      <a href="https://toby-crust-portfolio.vercel.app" target="_blank">toby-crust-portfolio.vercel.app</a>
-      <a href="https://www.linkedin.com/in/toby-crust-a6a2a2245/" target="_blank">LinkedIn /toby-crust</a>
+    <header class="mast">
+      <div class="name" data-echo="Toby Crust">Toby <span class="sur">Crust</span></div>
+      <div class="tag">Software Engineer — AI Workflows · Full-Stack &amp; Integrations · Real-Time Systems</div>
+      <div class="contact">
+        <span>Sydney, AU</span>
+        <span>+61 425 843 487</span>
+        <a href="mailto:tobycrust@gmail.com">tobycrust@gmail.com</a>
+        <a href="https://toby-crust-portfolio.vercel.app" target="_blank">toby-crust-portfolio.vercel.app</a>
+        <a href="https://www.linkedin.com/in/toby-crust-a6a2a2245/" target="_blank">LinkedIn /toby-crust</a>
+      </div>
+      <p class="lede">Software engineer operating across <b>full-stack web applications</b> (React, TypeScript),
+        <b>AI workflow automation</b> (Python, AI agents, Slack API), and <b>real-time systems</b> (Unity, C#). Three
+        years of shipping across SaaS, government, and high-traffic platforms owning products and custom internal tools
+        end-to-end from prototype to production release.
+      </p>
+    </header>
+
+    <h2>Selected work</h2>
+
+    <article class="proj">
+      <div class="who">Slik · AI &amp; Internal Tooling</div>
+      <h3>Slack-to-VM AI Agent &amp; Testing Pipeline</h3>
+      <p>Built an internal AI automation pipeline integrated with Slack to accelerate development and non-dev workflows.
+        Non-technical team members specify requested project changes directly in Slack, which dispatches to an AI agent
+        that provisions a virtual machine, applies code changes, executes test suites, and alerts me for final PR review
+        and merge. Drastically cut routine work and accelerated overall team shipping velocity.</p>
+      <div class="stack"><span>Python</span><span>AI Agents</span><span>Slack API</span><span>VM
+          Automation</span><span>GitHub Actions</span><span>Automated Testing</span><span>CI/CD</span></div>
+    </article>
+
+    <article class="proj">
+      <div class="who">Slik · Northern Territory Government</div>
+      <h3>Augmented reality heritage app</h3>
+      <p>Shipped a historical WII AR app for the NT Government on iOS and Android, triggering on-site content via BLE
+        beacons and geolocation. Built with Unity Addressables to reduce app store download size and enable modular,
+        dynamic content updates for future expansion. Further locations and experiences are in production now, due to
+        success of initial app.</p>
+      <div class="stack"><span>Unity</span><span>C#</span><span>AR Foundation</span><span>ARKit / ARCore</span><span>BLE
+          beacons</span><span>Addressables</span><span>Localization</span><span>Convai</span></div>
+    </article>
+
+    <article class="proj">
+      <div class="who">Slik · FightMND</div>
+      <h3>Donation platform</h3>
+      <p>Full-stack build of the donation site for a national fundraising campaign — payment flow, supporter data
+        capture and a front end that held up under broadcast-driven traffic spikes.</p>
+      <div class="stack"><span>React</span><span>TypeScript</span><span>Stripe</span><span>Netlify</span></div>
+      <div class="metrics">
+        <div class="metric">
+          <div class="n"><span class="highlight">$165,575</span></div>
+          <div class="l">Raised through the platform</div>
+        </div>
+        <div class="metric">
+          <div class="n"><span class="highlight">8.9K</span></div>
+          <div class="l">Peak concurrent viewers</div>
+        </div>
+      </div>
+    </article>
+
+    <h2>Experience</h2>
+
+    <div class="role">
+      <div class="when">Dec 2025 — present</div>
+      <div class="what">
+        <strong>Slik</strong> <em>— Software Engineer, Sydney</em>
+        <ul>
+          <li>Lead developer on the NT Government AR app, from Unity build through to App Store Connect and Play Console
+            release.</li>
+          <li>Built custom internal Slack-to-VM AI agent workflows to automate stakeholder requests, code modifications,
+            and testing pipelines.</li>
+        </ul>
+      </div>
     </div>
-    <p class="lede">Software engineer operating across <b>full-stack web applications</b> (React, TypeScript) and <b>real-time 3D/AR engines</b> (Unity, Unreal Engine, C++). Three years of shipping across SaaS, government, and high-traffic platforms owning products end-to-end from prototype to app store release.</p>
-  </header>
 
-  <h2>Selected work</h2>
-
-  <article class="proj">
-    <div class="who">Slik · Northern Territory Government</div>
-    <h3>Augmented reality heritage app</h3>
-    <p>Shipped a historical WII AR app for the NT Government on iOS and Android, triggering on-site content via BLE beacons and geolocation. Built with Unity Addressables to reduce app store download size and enable modular, dynamic content updates for future expansion. Further locations and experiences are in production now, due to success of initial app.</p>
-    <div class="stack"><span>Unity</span><span>C#</span><span>AR Foundation</span><span>ARKit / ARCore</span><span>BLE beacons</span><span>Addressables</span><span>Localization</span><span>Convai</span></div>
-  </article>
-
-  <article class="proj">
-    <div class="who">Slik · FightMND</div>
-    <h3>Donation platform</h3>
-    <p>Full-stack build of the donation site for a national fundraising campaign — payment flow, supporter data capture and a front end that held up under broadcast-driven traffic spikes.</p>
-    <div class="stack"><span>React</span><span>TypeScript</span><span>Stripe</span><span>Netlify</span></div>
-    <div class="metrics">
-      <div class="metric"><div class="n"><span class="todo">$0.0M</span></div><div class="l">Raised through the platform</div></div>
-      <div class="metric"><div class="n"><span class="todo">0,000</span></div><div class="l">Peak concurrent viewers</div></div>
+    <div class="role">
+      <div class="when">Oct 2024 — Oct 2025</div>
+      <div class="what">
+        <strong>Fabra</strong> <em>— Software Engineer, Sydney</em>
+        <ul>
+          <li>Built features across Fabra's core SaaS product in React and TypeScript.</li>
+          <li>Took over a departing senior engineer's workstream and shipped share-design permissions and email
+            validation end to end, front and back.</li>
+          <li>Wrote internal tooling that cut manual steps out of the team's day-to-day backend operations.</li>
+        </ul>
+      </div>
     </div>
-  </article>
 
-  <article class="proj">
-    <div class="who">Slik · R&amp;D</div>
-    <h3>Holo Box — a flat screen that looks volumetric</h3>
-    <p>Built a holographic display experience that tracks the viewer's head position with machine learning and renders the scene through an off-axis frustum, so the perspective updates to where the person actually is. The result reads as real depth inside the box rather than an image on a panel.</p>
-    <div class="stack"><span>Unity</span><span>ML head tracking</span><span>Off-axis projection</span><span>Custom camera rig</span></div>
-  </article>
-
-  <h2>Experience</h2>
-
-  <div class="role">
-    <div class="when">Dec 2025 — present</div>
-    <div class="what">
-      <strong>Slik</strong> <em>— Software Engineer, Sydney</em>
-      <ul>
-        <li>Lead developer on the NT Government AR app, from Unity build through to App Store Connect and Play Console release.</li>
-        <li>Full-stack client web work: Stripe checkout flows, mailing-list and ESP integrations, Netlify deployments and DNS.</li>
-        <li>Automated content and data pipelines with GitHub Actions and DigitalOcean Spaces.</li>
-      </ul>
+    <div class="role">
+      <div class="when">Feb — Oct 2024</div>
+      <div class="what">
+        <strong>Bardon Design</strong> <em>— Junior Software Engineer, Bangkok</em>
+        <ul>
+          <li>Worked with the Louis Vuitton team on a gamified e-commerce experience built to lift engagement through
+            interactive shopping.</li>
+          <li>Built an interactive AR furniture selection app.</li>
+        </ul>
+      </div>
     </div>
+
+    <div class="role">
+      <div class="when">Summers, 2021 — 2023</div>
+      <div class="what">
+        <strong>Software internships</strong> <em>— Auckland</em>
+        <ul>
+          <li>Built an AR Rube Goldberg machine level for GeoArGames, and a 2D arcade game embedded in the
+            Yuri&amp;Niels site.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Toolkit</h2>
+    <div class="grid">
+      <div>
+        <h4>Languages</h4>
+        <ul>
+          <li>TypeScript / JavaScript</li>
+          <li>Python</li>
+          <li>C#</li>
+          <li>C++</li>
+        </ul>
+      </div>
+      <div>
+        <h4>AI &amp; Workflows</h4>
+        <ul>
+          <li>AI Agents / LLMs</li>
+          <li>Slack API &amp; Webhooks</li>
+          <li>VM Automation</li>
+          <li>Automated Testing</li>
+          <li>Prompt Engineering</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Web &amp; Integrations</h4>
+        <ul>
+          <li>React</li>
+          <li>Stripe</li>
+          <li>REST APIs</li>
+          <li>ESP Integrations</li>
+          <li>Netlify / Vercel</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ship &amp; Operate</h4>
+        <ul>
+          <li>GitHub Actions</li>
+          <li>Git Version Control</li>
+          <li>App Store Connect</li>
+          <li>Google Play Console</li>
+          <li>DigitalOcean Spaces</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot">
+      <div>
+        <h4>Education</h4>
+        Bachelor of Design Innovation — Victoria University, 2021–2023
+        <h4 style="margin-top:4mm">Outside work</h4>
+        Robotics · 3D printing · Snowboarding · Waterpolo · Toastmasters
+      </div>
+      <div>
+        <h4>References</h4>
+        Available on request — previous engineering leads at Fabra and Bardon Design are happy to speak.
+      </div>
+    </div>
+
   </div>
-
-  <div class="role">
-    <div class="when">Oct 2024 — Oct 2025</div>
-    <div class="what">
-      <strong>Fabra</strong> <em>— Software Engineer, Sydney</em>
-      <ul>
-        <li>Built features across Fabra's core SaaS product in React and TypeScript.</li>
-        <li>Took over a departing senior engineer's workstream and shipped share-design permissions and email validation end to end, front and back.</li>
-        <li>Wrote internal tooling that cut manual steps out of the team's day-to-day backend operations.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="role">
-    <div class="when">Feb — Oct 2024</div>
-    <div class="what">
-      <strong>Bardon Design</strong> <em>— Junior Software Engineer, Bangkok</em>
-      <ul>
-        <li>Worked with the Louis Vuitton team on a gamified e-commerce experience built to lift engagement through interactive shopping.</li>
-        <li>Built an interactive AR furniture selection app.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="role">
-    <div class="when">Summers, 2021 — 2023</div>
-    <div class="what">
-      <strong>Software internships</strong> <em>— Auckland</em>
-      <ul>
-        <li>Built an AR Rube Goldberg machine level for GeoArGames, and a 2D arcade game embedded in the Yuri&amp;Niels site.</li>
-      </ul>
-    </div>
-  </div>
-
-  <h2>Toolkit</h2>
-  <div class="grid">
-    <div><h4>Languages</h4><ul><li>TypeScript / JavaScript</li><li>C#</li><li>C++</li><li>Python</li></ul></div>
-    <div><h4>Web</h4><ul><li>React</li><li>Stripe</li><li>Netlify / Vercel</li><li>ESP integrations</li></ul></div>
-    <div><h4>Real-time &amp; AR</h4><ul><li>Unity</li><li>Unreal Engine</li><li>BLE beacons</li><li>Three.js</li></ul></div>
-    <div><h4>Ship &amp; operate</h4><ul><li>App Store Connect</li><li>Google Play Console</li><li>GitHub Actions</li><li>Git / Unity Version Control</li></ul></div>
-  </div>
-
-  <div class="foot">
-    <div>
-      <h4>Education</h4>
-      Bachelor of Design Innovation — Victoria University, 2021–2023
-      <h4 style="margin-top:4mm">Outside work</h4>
-      Robotics · 3D printing · Snowboarding · Waterpolo · Toastmasters
-    </div>
-    <div>
-      <h4>References</h4>
-      Available on request — previous engineering leads at Fabra and Bardon Design are happy to speak.
-    </div>
-  </div>
-
-</div>
 </body>
+
 </html>
