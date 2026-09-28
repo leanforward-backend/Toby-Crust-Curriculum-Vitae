@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Toby Crust — CV</title>
+  <title>Toby Crust — CV · XR Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="cv.css">
+  <link rel="stylesheet" href="../cv.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
 
     <header class="mast">
       <div class="name" data-echo="Toby Crust">Toby <span class="sur">Crust</span></div>
-      <div class="tag">Software Engineer — AI Workflows · Full-Stack &amp; Integrations · Real-Time Systems</div>
+      <div class="tag">XR Engineer — Unity · Augmented Reality · Real-time 3D</div>
       <div class="contact">
         <span>Sydney, AU</span>
         <span>+61 425 843 487</span>
@@ -26,53 +26,44 @@
         <a href="https://toby-crust-portfolio.vercel.app" target="_blank">toby-crust-portfolio.vercel.app</a>
         <a href="https://www.linkedin.com/in/toby-crust-a6a2a2245/" target="_blank">LinkedIn /toby-crust</a>
       </div>
-      <p class="lede">Software engineer operating across <b>full-stack web applications</b> (React, TypeScript),
-        <b>AI workflow automation</b> (Python, AI agents, Slack API), and <b>real-time systems</b> (Unity, C#). Three
-        years of shipping across SaaS, government, and high-traffic platforms owning products and custom internal tools
-        end-to-end from prototype to production release.
+      <p class="lede">Software engineer shipping <b>real-time 3D and AR</b> (Unity, Unreal Engine, C#, C++) to the App
+        Store and Google Play, backed by <b>full-stack web</b> (React, TypeScript). Lead developer on an on-site AR
+        heritage app for the NT Government, with AR and interactive work for Louis Vuitton's team, GeoArGames and a
+        furniture-selection app before that.
       </p>
     </header>
 
     <h2>Selected work</h2>
 
     <article class="proj">
-      <div class="who">Slik · AI &amp; Internal Tooling</div>
-      <h3>Slack-to-VM AI Agent &amp; Testing Pipeline</h3>
-      <p>Built an internal AI automation pipeline integrated with Slack to accelerate development and non-dev workflows.
-        Non-technical team members specify requested project changes directly in Slack, which dispatches to an AI agent
-        that provisions a virtual machine, applies code changes, executes test suites, and alerts me for final PR review
-        and merge. Drastically cut routine work and accelerated overall team shipping velocity.</p>
-      <div class="stack"><span>Python</span><span>AI Agents</span><span>Slack API</span><span>VM
-          Automation</span><span>GitHub Actions</span><span>Automated Testing</span><span>CI/CD</span></div>
-    </article>
-
-    <article class="proj">
       <div class="who">Slik · Northern Territory Government</div>
       <h3>Augmented reality heritage app</h3>
-      <p>Shipped a historical WII AR app for the NT Government on iOS and Android, triggering on-site content via BLE
+      <p>Shipped a historical WWII AR app for the NT Government on iOS and Android, triggering on-site content via BLE
         beacons and geolocation. Built with Unity Addressables to reduce app store download size and enable modular,
         dynamic content updates for future expansion. Further locations and experiences are in production now, due to
-        success of initial app.</p>
+        the success of the initial app.</p>
       <div class="stack"><span>Unity</span><span>C#</span><span>AR Foundation</span><span>ARKit / ARCore</span><span>BLE
           beacons</span><span>Addressables</span><span>Localization</span><span>Convai</span></div>
     </article>
 
     <article class="proj">
-      <div class="who">Slik · FightMND</div>
-      <h3>Donation platform</h3>
-      <p>Full-stack build of the donation site for a national fundraising campaign — payment flow, supporter data
-        capture and a front end that held up under broadcast-driven traffic spikes.</p>
-      <div class="stack"><span>React</span><span>TypeScript</span><span>Stripe</span><span>Netlify</span></div>
-      <div class="metrics">
-        <div class="metric">
-          <div class="n"><span class="highlight">$165,575</span></div>
-          <div class="l">Raised through the platform</div>
-        </div>
-        <div class="metric">
-          <div class="n"><span class="highlight">8.9K</span></div>
-          <div class="l">Peak concurrent viewers</div>
-        </div>
-      </div>
+      <div class="who">Slik · R&amp;D</div>
+      <h3>Holo Box: a flat screen that looks volumetric</h3>
+      <p>Built a holographic display experience that tracks the viewer's head position with machine learning and
+        renders the scene through an off-axis frustum, so the perspective updates to where the person actually is. The
+        result reads as real depth inside the box rather than an image on a panel.</p>
+      <div class="stack"><span>Unity</span><span>ML head tracking</span><span>Off-axis projection</span><span>Custom
+          camera rig</span></div>
+    </article>
+
+    <article class="proj">
+      <div class="who">Personal project · Unreal Engine 5</div>
+      <h3>Movement shooter in UE5 and C++</h3>
+      <p>Single-player movement shooter with a custom character movement component, a weapon system with recoil,
+        reloads and hit markers, and AI bots that use perception, simulated aim and the same movement tech as the
+        player. Includes a campaign mode with level progression and save games.</p>
+      <div class="stack"><span>Unreal Engine 5</span><span>C++</span><span>Gameplay AI</span><span>Movement
+          systems</span><span>Gameplay Tags</span></div>
     </article>
 
     <h2>Experience</h2>
@@ -84,8 +75,8 @@
         <ul>
           <li>Lead developer on the NT Government AR app, from Unity build through to App Store Connect and Play Console
             release.</li>
-          <li>Built custom internal Slack-to-VM AI agent workflows to automate stakeholder requests, code modifications,
-            and testing pipelines.</li>
+          <li>R&amp;D on Holo Box, an ML head-tracked holographic display.</li>
+          <li>Full-stack client web work and AI agent workflows for internal tooling.</li>
         </ul>
       </div>
     </div>
@@ -98,7 +89,6 @@
           <li>Built features across Fabra's core SaaS product in React and TypeScript.</li>
           <li>Took over a departing senior engineer's workstream and shipped share-design permissions and email
             validation end to end, front and back.</li>
-          <li>Wrote internal tooling that cut manual steps out of the team's day-to-day backend operations.</li>
         </ul>
       </div>
     </div>
@@ -108,9 +98,9 @@
       <div class="what">
         <strong>Bardon Design</strong> <em>— Junior Software Engineer, Bangkok</em>
         <ul>
+          <li>Built an interactive AR furniture selection app.</li>
           <li>Worked with the Louis Vuitton team on a gamified e-commerce experience built to lift engagement through
             interactive shopping.</li>
-          <li>Built an interactive AR furniture selection app.</li>
         </ul>
       </div>
     </div>
@@ -126,45 +116,59 @@
       </div>
     </div>
 
+    <h2>Side projects</h2>
+    <div class="side">
+      <div>
+        <strong>Hexapod robot</strong> <em>— real-time control</em>
+        <p>Six-legged walking robot. A three.js editor of the leg lets you drag joints or an IK foot handle and streams
+          servo angles live over WiFi to Arduino firmware.</p>
+        <div class="stack"><span>three.js</span><span>Inverse kinematics</span><span>C++</span><span>Python</span></div>
+      </div>
+      <div>
+        <strong>TickyTick</strong> <em>— cross-platform app</em>
+        <p>Local-first task manager for web, PWA and Android from one React codebase, with realtime Supabase sync and a
+          Gemini function-calling assistant.</p>
+        <div class="stack"><span>React</span><span>TypeScript</span><span>Capacitor</span><span>Supabase</span></div>
+      </div>
+    </div>
+
     <h2>Toolkit</h2>
     <div class="grid">
       <div>
+        <h4>Engines</h4>
+        <ul>
+          <li>Unity</li>
+          <li>Unreal Engine 5</li>
+          <li>three.js</li>
+          <li>Unity Addressables</li>
+        </ul>
+      </div>
+      <div>
+        <h4>AR &amp; Devices</h4>
+        <ul>
+          <li>AR Foundation</li>
+          <li>ARKit / ARCore</li>
+          <li>BLE Beacons</li>
+          <li>Geolocation</li>
+          <li>Convai</li>
+        </ul>
+      </div>
+      <div>
         <h4>Languages</h4>
         <ul>
-          <li>TypeScript / JavaScript</li>
-          <li>Python</li>
           <li>C#</li>
           <li>C++</li>
-        </ul>
-      </div>
-      <div>
-        <h4>AI &amp; Workflows</h4>
-        <ul>
-          <li>AI Agents / LLMs</li>
-          <li>Slack API &amp; Webhooks</li>
-          <li>VM Automation</li>
-          <li>Automated Testing</li>
-          <li>Prompt Engineering</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Web &amp; Integrations</h4>
-        <ul>
-          <li>React</li>
-          <li>Stripe</li>
-          <li>REST APIs</li>
-          <li>ESP Integrations</li>
-          <li>Netlify / Vercel</li>
+          <li>TypeScript / JavaScript</li>
+          <li>Python</li>
         </ul>
       </div>
       <div>
         <h4>Ship &amp; Operate</h4>
         <ul>
-          <li>GitHub Actions</li>
-          <li>Git Version Control</li>
           <li>App Store Connect</li>
           <li>Google Play Console</li>
-          <li>DigitalOcean Spaces</li>
+          <li>Git / Unity Version Control</li>
+          <li>GitHub Actions</li>
         </ul>
       </div>
     </div>

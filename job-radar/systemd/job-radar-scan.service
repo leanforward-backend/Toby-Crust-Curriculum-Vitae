@@ -1,0 +1,11 @@
+[Unit]
+Description=Job Radar daily scan
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=@DIR@
+ExecStart=/usr/bin/env python3 @DIR@/scan.py
+StandardOutput=append:@DIR@/data/scan.log
+StandardError=append:@DIR@/data/scan.log

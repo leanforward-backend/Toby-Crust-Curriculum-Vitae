@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Toby Crust — CV</title>
+  <title>Toby Crust — CV · Full-Stack Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="cv.css">
+  <link rel="stylesheet" href="../cv.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
 
     <header class="mast">
       <div class="name" data-echo="Toby Crust">Toby <span class="sur">Crust</span></div>
-      <div class="tag">Software Engineer — AI Workflows · Full-Stack &amp; Integrations · Real-Time Systems</div>
+      <div class="tag">Full-Stack Engineer — React · TypeScript · Payments &amp; Integrations</div>
       <div class="contact">
         <span>Sydney, AU</span>
         <span>+61 425 843 487</span>
@@ -26,42 +26,20 @@
         <a href="https://toby-crust-portfolio.vercel.app" target="_blank">toby-crust-portfolio.vercel.app</a>
         <a href="https://www.linkedin.com/in/toby-crust-a6a2a2245/" target="_blank">LinkedIn /toby-crust</a>
       </div>
-      <p class="lede">Software engineer operating across <b>full-stack web applications</b> (React, TypeScript),
-        <b>AI workflow automation</b> (Python, AI agents, Slack API), and <b>real-time systems</b> (Unity, C#). Three
-        years of shipping across SaaS, government, and high-traffic platforms owning products and custom internal tools
-        end-to-end from prototype to production release.
+      <p class="lede">Full-stack engineer shipping <b>React and TypeScript</b> products end to end: features across
+        Fabra's SaaS product, a national donation site that raised <b>$165,575</b> through Stripe under
+        broadcast-driven traffic, and a <b>local-first</b> task manager that syncs across web, PWA and Android. Three
+        years of owning the backend, integrations and deploys as well as the UI.
       </p>
     </header>
 
     <h2>Selected work</h2>
 
     <article class="proj">
-      <div class="who">Slik · AI &amp; Internal Tooling</div>
-      <h3>Slack-to-VM AI Agent &amp; Testing Pipeline</h3>
-      <p>Built an internal AI automation pipeline integrated with Slack to accelerate development and non-dev workflows.
-        Non-technical team members specify requested project changes directly in Slack, which dispatches to an AI agent
-        that provisions a virtual machine, applies code changes, executes test suites, and alerts me for final PR review
-        and merge. Drastically cut routine work and accelerated overall team shipping velocity.</p>
-      <div class="stack"><span>Python</span><span>AI Agents</span><span>Slack API</span><span>VM
-          Automation</span><span>GitHub Actions</span><span>Automated Testing</span><span>CI/CD</span></div>
-    </article>
-
-    <article class="proj">
-      <div class="who">Slik · Northern Territory Government</div>
-      <h3>Augmented reality heritage app</h3>
-      <p>Shipped a historical WII AR app for the NT Government on iOS and Android, triggering on-site content via BLE
-        beacons and geolocation. Built with Unity Addressables to reduce app store download size and enable modular,
-        dynamic content updates for future expansion. Further locations and experiences are in production now, due to
-        success of initial app.</p>
-      <div class="stack"><span>Unity</span><span>C#</span><span>AR Foundation</span><span>ARKit / ARCore</span><span>BLE
-          beacons</span><span>Addressables</span><span>Localization</span><span>Convai</span></div>
-    </article>
-
-    <article class="proj">
       <div class="who">Slik · FightMND</div>
-      <h3>Donation platform</h3>
-      <p>Full-stack build of the donation site for a national fundraising campaign — payment flow, supporter data
-        capture and a front end that held up under broadcast-driven traffic spikes.</p>
+      <h3>National campaign donation platform</h3>
+      <p>Full-stack build of the donation site for a national fundraising campaign: Stripe payment flow, supporter data
+        capture, and a front end that held up under broadcast-driven traffic spikes.</p>
       <div class="stack"><span>React</span><span>TypeScript</span><span>Stripe</span><span>Netlify</span></div>
       <div class="metrics">
         <div class="metric">
@@ -75,6 +53,27 @@
       </div>
     </article>
 
+    <article class="proj">
+      <div class="who">TickyTick · Personal product</div>
+      <h3>Local-first task manager with realtime sync</h3>
+      <p>Tasks, calendar planning, habits and focus sessions in one codebase that runs in the browser, installs as a
+        PWA and builds to an Android APK. IndexedDB is the source of truth, so every interaction is instant and works
+        offline; a sync engine pushes changed rows to Supabase Postgres and pulls remote changes back over a realtime
+        websocket, with Row Level Security scoping every row to its user. Includes a Gemini function-calling assistant
+        whose proposed changes are reviewed before they are saved.</p>
+      <div class="stack"><span>React</span><span>TypeScript</span><span>Dexie / IndexedDB</span><span>Supabase</span><span>Postgres
+          RLS</span><span>Realtime</span><span>Capacitor</span><span>PWA</span></div>
+    </article>
+
+    <article class="proj">
+      <div class="who">Slik · AI &amp; Internal Tooling</div>
+      <h3>Slack-to-VM AI Agent &amp; Testing Pipeline</h3>
+      <p>Internal pipeline where non-technical team members request project changes in Slack; an AI agent provisions a
+        virtual machine, applies the change, runs the test suite and alerts me for final PR review and merge.</p>
+      <div class="stack"><span>Python</span><span>AI Agents</span><span>Slack API</span><span>GitHub
+          Actions</span><span>CI/CD</span></div>
+    </article>
+
     <h2>Experience</h2>
 
     <div class="role">
@@ -82,10 +81,12 @@
       <div class="what">
         <strong>Slik</strong> <em>— Software Engineer, Sydney</em>
         <ul>
-          <li>Lead developer on the NT Government AR app, from Unity build through to App Store Connect and Play Console
-            release.</li>
-          <li>Built custom internal Slack-to-VM AI agent workflows to automate stakeholder requests, code modifications,
-            and testing pipelines.</li>
+          <li>Full-stack client web work: Stripe checkout flows, mailing-list and ESP integrations, Netlify deployments
+            and DNS.</li>
+          <li>Automated content and data pipelines with GitHub Actions and DigitalOcean Spaces.</li>
+          <li>Built internal Slack-to-VM AI agent workflows that turn stakeholder requests into tested pull
+            requests.</li>
+          <li>Lead developer on the NT Government AR app, through to App Store Connect and Play Console release.</li>
         </ul>
       </div>
     </div>
@@ -120,8 +121,8 @@
       <div class="what">
         <strong>Software internships</strong> <em>— Auckland</em>
         <ul>
-          <li>Built an AR Rube Goldberg machine level for GeoArGames, and a 2D arcade game embedded in the
-            Yuri&amp;Niels site.</li>
+          <li>Built a 2D arcade game embedded in the Yuri&amp;Niels site, and an AR Rube Goldberg machine level for
+            GeoArGames.</li>
         </ul>
       </div>
     </div>
@@ -132,39 +133,39 @@
         <h4>Languages</h4>
         <ul>
           <li>TypeScript / JavaScript</li>
+          <li>SQL (Postgres)</li>
           <li>Python</li>
           <li>C#</li>
-          <li>C++</li>
         </ul>
       </div>
       <div>
-        <h4>AI &amp; Workflows</h4>
-        <ul>
-          <li>AI Agents / LLMs</li>
-          <li>Slack API &amp; Webhooks</li>
-          <li>VM Automation</li>
-          <li>Automated Testing</li>
-          <li>Prompt Engineering</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Web &amp; Integrations</h4>
+        <h4>Front end</h4>
         <ul>
           <li>React</li>
-          <li>Stripe</li>
+          <li>Vite</li>
+          <li>Tailwind CSS</li>
+          <li>PWA / Capacitor</li>
+          <li>IndexedDB / Dexie</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Back end &amp; APIs</h4>
+        <ul>
+          <li>Supabase / Postgres</li>
+          <li>Convex</li>
           <li>REST APIs</li>
+          <li>Stripe</li>
           <li>ESP Integrations</li>
-          <li>Netlify / Vercel</li>
         </ul>
       </div>
       <div>
         <h4>Ship &amp; Operate</h4>
         <ul>
-          <li>GitHub Actions</li>
-          <li>Git Version Control</li>
-          <li>App Store Connect</li>
-          <li>Google Play Console</li>
+          <li>GitHub Actions / CI</li>
+          <li>Automated Testing</li>
+          <li>Netlify / Vercel / DNS</li>
           <li>DigitalOcean Spaces</li>
+          <li>Git</li>
         </ul>
       </div>
     </div>

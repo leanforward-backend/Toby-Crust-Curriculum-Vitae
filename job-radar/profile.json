@@ -1,0 +1,700 @@
+{
+  "name": "Toby Crust",
+  "location": {
+    "label": "Sydney, onsite, hybrid or office-based flexible",
+    "linkedinLocation": "Greater Sydney Area",
+    "include": "sydney|new south wales|\\bnsw\\b",
+    "excludeTowns": "newcastle|wollongong|coniston|gosford|central coast|maitland|cessnock|wagga|albury|orange|dubbo|bathurst|tamworth|port macquarie|coffs harbour|lismore|byron|nowra|goulburn|queanbeyan|armidale|griffith",
+    "allowModes": [
+      "onsite",
+      "hybrid",
+      "flexible"
+    ]
+  },
+  "experience": {
+    "years": 3,
+    "maxYearsRequired": 4
+  },
+  "excludeTitle": "\\b(senior|sr|snr|lead|staff|principal|head|manager|director|architect|vp|chief|distinguished|intern|internship|graduate|apprentice|trainee|iii|iv)\\b|engineer\\s*[3-9]\\b|level\\s*[3-9]\\b",
+  "offTrackTitle": "\\b(recruiter|account executive|marketing|counsel|legal|finance|payroll|scientist|security|sre|site reliability|embedded|firmware|hardware|network|mechanical|electrical|civil|teacher|tutor|lecturer|trainer|business development|salesforce|servicenow|sap|dynamics|\\.net|java|php|wordpress|shopify|test|qa|analyst|support|designer|data engineer|devops|platform engineer|kotlin|golang|presales|pre-sales)\\b",
+  "minScore": 45,
+  "minSkillWeight": 8,
+  "tracks": {
+    "fde": {
+      "label": "Forward Deployed",
+      "cv": "profiles/pdf/forward-deployed-engineer.pdf",
+      "title": "forward[- ]deployed|deployment engineer|solutions? engineer|customer engineer|implementation engineer|integration engineer|applied ai engineer|ai solutions|agent deployment",
+      "queries": [
+        "forward deployed engineer",
+        "solutions engineer",
+        "implementation engineer",
+        "deployment engineer",
+        "integration engineer"
+      ],
+      "cvLeads": "your Slack-to-VM agent for non-technical teams, the on-site NT Government app and client integrations",
+      "cvSkills": [
+        "Customer-facing",
+        "Integrations",
+        "REST APIs",
+        "Webhooks",
+        "AI agents",
+        "LLMs",
+        "Prototyping",
+        "Automation",
+        "Stripe / payments"
+      ],
+      "cvName": "Forward Deployed Engineer CV"
+    },
+    "ai": {
+      "label": "AI / Automation",
+      "cv": "profiles/pdf/ai-engineer.pdf",
+      "title": "\\bai\\b|\\bllm|agent|genai|automation|machine learning|\\bml\\b",
+      "queries": [
+        "AI engineer",
+        "LLM engineer",
+        "AI automation engineer",
+        "applied AI engineer",
+        "agentic AI"
+      ],
+      "cvLeads": "your Slack-to-VM AI agent and TickyTick's function-calling assistant",
+      "cvSkills": [
+        "AI agents",
+        "LLMs",
+        "Function calling",
+        "Prompt engineering",
+        "Automation",
+        "Python",
+        "Testing",
+        "CI/CD"
+      ],
+      "cvName": "AI Engineer CV"
+    },
+    "xr": {
+      "label": "XR / Real-time",
+      "cv": "profiles/pdf/xr-engineer.pdf",
+      "title": "unity|\\bxr\\b|\\bar\\b|\\bvr\\b|augmented reality|unreal|\\b3d\\b|game|graphics|creative technologist|real[- ]time",
+      "queries": [
+        "unity developer",
+        "augmented reality developer",
+        "XR developer",
+        "unreal engine developer",
+        "creative technologist"
+      ],
+      "cvLeads": "the NT Government AR app, Holo Box and your UE5 shooter",
+      "cvSkills": [
+        "Unity",
+        "C#",
+        "AR / XR",
+        "Unreal / C++",
+        "three.js / 3D",
+        "App store releases"
+      ],
+      "cvName": "XR Engineer CV"
+    },
+    "fullstack": {
+      "label": "Full-Stack",
+      "cv": "profiles/pdf/full-stack-engineer.pdf",
+      "title": "full[- ]?stack|product engineer|front[- ]?end|web|software engineer|software development engineer|software developer|react|typescript",
+      "queries": [
+        "full stack engineer react",
+        "full stack developer typescript",
+        "product engineer",
+        "frontend engineer react",
+        "software engineer typescript"
+      ],
+      "cvLeads": "the FightMND platform, React and TypeScript work at Fabra, and TickyTick's sync engine",
+      "cvSkills": [
+        "TypeScript",
+        "React",
+        "JavaScript / Node",
+        "Full-stack",
+        "Postgres / SQL",
+        "Supabase",
+        "Stripe / payments",
+        "REST APIs"
+      ],
+      "cvName": "Full-Stack Engineer CV"
+    }
+  },
+  "skills": [
+    {
+      "name": "AI agents",
+      "pattern": "\\bagents?\\b|agentic",
+      "weight": 3,
+      "evidence": "Slack-to-VM AI agent at Slik"
+    },
+    {
+      "name": "LLMs",
+      "pattern": "\\bllms?\\b|large language model|genai|generative ai|\\bgpt|claude|gemini|openai",
+      "weight": 3,
+      "evidence": "Slack-to-VM AI agent at Slik"
+    },
+    {
+      "name": "Function calling",
+      "pattern": "function[- ]calling|tool[- ]use|tool calling|\\bmcp\\b",
+      "weight": 2,
+      "evidence": "TickyTick's Gemini assistant"
+    },
+    {
+      "name": "Prompt engineering",
+      "pattern": "prompt",
+      "weight": 2,
+      "evidence": "TickyTick's Gemini assistant"
+    },
+    {
+      "name": "Automation",
+      "pattern": "automat",
+      "weight": 2,
+      "evidence": "Slack-to-VM AI agent at Slik"
+    },
+    {
+      "name": "Python",
+      "pattern": "python",
+      "weight": 3,
+      "evidence": "Slack-to-VM AI agent at Slik"
+    },
+    {
+      "name": "TypeScript",
+      "pattern": "typescript",
+      "weight": 3,
+      "evidence": "React and TypeScript work at Fabra"
+    },
+    {
+      "name": "React",
+      "pattern": "\\breact\\b(?! native)",
+      "weight": 3,
+      "evidence": "React and TypeScript work at Fabra"
+    },
+    {
+      "name": "JavaScript / Node",
+      "pattern": "javascript|\\bnode(\\.js)?\\b",
+      "weight": 1,
+      "evidence": "React and TypeScript work at Fabra"
+    },
+    {
+      "name": "Full-stack",
+      "pattern": "full[- ]?stack|end[- ]to[- ]end",
+      "weight": 2,
+      "evidence": "React and TypeScript work at Fabra"
+    },
+    {
+      "name": "Integrations",
+      "pattern": "integrat",
+      "weight": 2,
+      "evidence": "client integrations at Slik"
+    },
+    {
+      "name": "REST APIs",
+      "pattern": "\\bapis?\\b|\\brest\\b",
+      "weight": 1,
+      "evidence": "client integrations at Slik"
+    },
+    {
+      "name": "Webhooks",
+      "pattern": "webhook",
+      "weight": 1,
+      "evidence": "client integrations at Slik"
+    },
+    {
+      "name": "Stripe / payments",
+      "pattern": "stripe|payments?",
+      "weight": 1,
+      "evidence": "FightMND donation platform"
+    },
+    {
+      "name": "Postgres / SQL",
+      "pattern": "postgres|\\bsql\\b",
+      "weight": 1,
+      "evidence": "TickyTick's Supabase sync engine"
+    },
+    {
+      "name": "Supabase",
+      "pattern": "supabase",
+      "weight": 2,
+      "evidence": "TickyTick's Supabase sync engine"
+    },
+    {
+      "name": "CI/CD",
+      "pattern": "ci/cd|github actions|continuous integration",
+      "weight": 1,
+      "evidence": "Slack-to-VM AI agent at Slik"
+    },
+    {
+      "name": "Testing",
+      "pattern": "automated test|unit test|test suites?",
+      "weight": 1,
+      "evidence": "Slack-to-VM AI agent at Slik"
+    },
+    {
+      "name": "Customer-facing",
+      "pattern": "customer[- ]facing|client[- ]facing|stakeholder|work(ing)? (directly )?with (customers|clients)|embed(ded)? with",
+      "weight": 2,
+      "evidence": "client delivery for the NT Government and FightMND"
+    },
+    {
+      "name": "Prototyping",
+      "pattern": "prototyp|proof[- ]of[- ]concept|\\bpoc\\b",
+      "weight": 2,
+      "evidence": "Holo Box R&D"
+    },
+    {
+      "name": "Unity",
+      "pattern": "\\bunity\\b",
+      "weight": 4,
+      "evidence": "NT Government AR app"
+    },
+    {
+      "name": "C#",
+      "pattern": "c#",
+      "weight": 2,
+      "evidence": "NT Government AR app"
+    },
+    {
+      "name": "AR / XR",
+      "pattern": "augmented reality|mixed reality|\\bxr\\b|\\bvr\\b|\\bar\\b(?=[ /-](?:app|experience|kit|core|foundation|development))",
+      "weight": 3,
+      "evidence": "NT Government AR app"
+    },
+    {
+      "name": "Unreal / C++",
+      "pattern": "unreal|c\\+\\+",
+      "weight": 2,
+      "evidence": "UE5 movement shooter"
+    },
+    {
+      "name": "three.js / 3D",
+      "pattern": "three\\.?js|webgl|\\b3d\\b",
+      "weight": 2,
+      "evidence": "hexapod robot's three.js editor"
+    },
+    {
+      "name": "App store releases",
+      "pattern": "app store|google play",
+      "weight": 1,
+      "evidence": "NT Government AR app"
+    }
+  ],
+  "gaps": [
+    {
+      "name": "Java",
+      "pattern": "\\bjava\\b(?!script)",
+      "penalty": 6
+    },
+    {
+      "name": ".NET",
+      "pattern": "\\.net\\b",
+      "penalty": 6
+    },
+    {
+      "name": "PHP / Laravel",
+      "pattern": "\\bphp\\b|laravel",
+      "penalty": 6
+    },
+    {
+      "name": "Go",
+      "pattern": "\\bgolang\\b",
+      "penalty": 5
+    },
+    {
+      "name": "Kubernetes",
+      "pattern": "kubernetes|\\bk8s\\b",
+      "penalty": 4
+    },
+    {
+      "name": "Terraform / IaC",
+      "pattern": "terraform|infrastructure as code",
+      "penalty": 4
+    },
+    {
+      "name": "Spark / Databricks",
+      "pattern": "\\bspark\\b|databricks",
+      "penalty": 5
+    },
+    {
+      "name": "ML model training",
+      "pattern": "pytorch|tensorflow|model training|fine-tun",
+      "penalty": 5
+    },
+    {
+      "name": "Kotlin / Swift",
+      "pattern": "kotlin|\\bswift\\b",
+      "penalty": 5
+    },
+    {
+      "name": "Power Platform",
+      "pattern": "power platform|power automate|copilot studio",
+      "penalty": 6
+    },
+    {
+      "name": "PhD",
+      "pattern": "\\bph\\.?d",
+      "penalty": 5
+    },
+    {
+      "name": "Pre-sales or quota",
+      "pattern": "pre-?sales|quota|sales cycle",
+      "penalty": 6
+    },
+    {
+      "name": "Citizenship or clearance",
+      "pattern": "citizen|security clearance|baseline clearance|\\bnv1\\b|\\bnv2\\b",
+      "penalty": 8
+    },
+    {
+      "name": "Rendering specialist",
+      "pattern": "rendering engineer|shader|graphics programming|vulkan|directx",
+      "penalty": 6
+    }
+  ],
+  "boards": {
+    "greenhouse": [
+      "databricks",
+      "anthropic",
+      "cultureamp",
+      "eucalyptus",
+      "octopusdeploy",
+      "buildkite",
+      "scaleai",
+      "vercel",
+      "figma",
+      "stripe",
+      "coinbase",
+      "mongodb",
+      "elastic",
+      "gitlab",
+      "datadog",
+      "twilio",
+      "dropbox",
+      "block",
+      "flipdish",
+      "thoughtworks",
+      "fivetran",
+      "intercom",
+      "gleanwork",
+      "tines",
+      "cresta",
+      "parloa",
+      "brex",
+      "mercury",
+      "wise",
+      "assemblyai",
+      "hipagesgroup",
+      "prospa",
+      "prezzee"
+    ],
+    "lever": [
+      "palantir",
+      "deputy",
+      "immutable",
+      "brighte",
+      "prosper",
+      "crypto",
+      "lyrebirdhealth",
+      "appen",
+      "pexa",
+      "finch",
+      "mable",
+      "splend",
+      "megaport",
+      "aircall"
+    ],
+    "ashby": [
+      "airwallex",
+      "openai",
+      "lorikeet",
+      "relevanceai",
+      "cognition",
+      "sierra",
+      "decagon",
+      "cohere",
+      "elevenlabs",
+      "supabase",
+      "langchain",
+      "notion",
+      "xero",
+      "dovetail",
+      "hatch",
+      "siteminder",
+      "confluent",
+      "lightspeedhq",
+      "miro",
+      "linear",
+      "posthog",
+      "replit",
+      "cursor",
+      "perplexity",
+      "harvey",
+      "writer",
+      "runway",
+      "pinecone",
+      "modal",
+      "fireworks",
+      "baseten",
+      "ramp",
+      "plaid",
+      "mitti",
+      "zip",
+      "airtasker",
+      "heidihealth",
+      "sitemate",
+      "neara",
+      "upguard",
+      "maincode",
+      "wonderful",
+      "nash"
+    ],
+    "smartrecruiters": [
+      "Canva",
+      "seek",
+      "carsales",
+      "nearmap",
+      "WiseTechGlobal",
+      "luxuryescapes",
+      "judobank"
+    ],
+    "gem": [
+      "linktree"
+    ],
+    "workday": [
+      {
+        "name": "Salesforce",
+        "host": "salesforce.wd12.myworkdayjobs.com",
+        "tenant": "salesforce",
+        "site": "External_Career_Site"
+      }
+    ],
+    "custom": [
+      "atlassian",
+      "amazon"
+    ]
+  },
+  "companyNames": {
+    "cultureamp": "Culture Amp",
+    "openai": "OpenAI",
+    "elevenlabs": "ElevenLabs",
+    "mongodb": "MongoDB",
+    "posthog": "PostHog",
+    "gleanwork": "Glean",
+    "lyrebirdhealth": "Lyrebird Health",
+    "scaleai": "Scale AI",
+    "relevanceai": "Relevance AI",
+    "octopusdeploy": "Octopus Deploy",
+    "siteminder": "SiteMinder",
+    "lightspeedhq": "Lightspeed",
+    "assemblyai": "AssemblyAI",
+    "gitlab": "GitLab",
+    "langchain": "LangChain",
+    "hipagesgroup": "hipages",
+    "prospa": "Prospa",
+    "prezzee": "Prezzee",
+    "megaport": "Megaport",
+    "aircall": "Aircall",
+    "mitti": "SafetyCulture",
+    "zip": "Zip",
+    "airtasker": "Airtasker",
+    "heidihealth": "Heidi Health",
+    "sitemate": "Sitemate",
+    "neara": "Neara",
+    "upguard": "UpGuard",
+    "maincode": "Maincode",
+    "wonderful": "Wonderful",
+    "nash": "Nash",
+    "Canva": "Canva",
+    "seek": "SEEK",
+    "carsales": "carsales",
+    "nearmap": "Nearmap",
+    "WiseTechGlobal": "WiseTech Global",
+    "luxuryescapes": "Luxury Escapes",
+    "judobank": "Judo Bank",
+    "linktree": "Linktree"
+  },
+  "usPathway": {
+    "usHeadquartered": [
+      "OpenAI",
+      "Anthropic",
+      "Cognition",
+      "Sierra",
+      "Decagon",
+      "Cursor",
+      "Databricks",
+      "MongoDB",
+      "Datadog",
+      "Stripe",
+      "Salesforce",
+      "Amazon",
+      "AWS",
+      "Microsoft",
+      "Google",
+      "Meta",
+      "Apple",
+      "Cisco",
+      "Telnyx",
+      "Optimizely",
+      "Cresta",
+      "Workato",
+      "Verkada",
+      "NinjaTech AI",
+      "Scale AI",
+      "Glean",
+      "GitLab",
+      "Twilio",
+      "Dropbox",
+      "Block",
+      "Figma",
+      "Vercel",
+      "Notion",
+      "Linear",
+      "Ramp",
+      "Plaid",
+      "Brex",
+      "Snowflake",
+      "Confluent",
+      "Okta",
+      "Zendesk",
+      "HubSpot",
+      "ServiceNow",
+      "NVIDIA",
+      "IBM",
+      "Oracle",
+      "Uber",
+      "Airbnb",
+      "LinkedIn",
+      "Palantir",
+      "Supabase",
+      "LangChain",
+      "Perplexity",
+      "Harvey",
+      "Replit",
+      "Modal",
+      "Fireworks",
+      "Baseten",
+      "Pinecone",
+      "PostHog",
+      "Mercury",
+      "AssemblyAI",
+      "Fivetran",
+      "Light & Wonder",
+      "Rockstar Games",
+      "Riot Games",
+      "Activision",
+      "Unity",
+      "Epic Games",
+      "Niantic",
+      "Snap",
+      "Adobe",
+      "Autodesk",
+      "News Corp"
+    ],
+    "usOffices": {
+      "Canva": "Austin",
+      "Atlassian": "San Francisco and other US cities",
+      "Airwallex": "San Francisco",
+      "SafetyCulture": "Kansas City",
+      "Mitti": "Kansas City",
+      "Culture Amp": "San Francisco",
+      "Rokt": "New York",
+      "Zip": "New York",
+      "Nearmap": "Utah",
+      "UpGuard": "Mountain View",
+      "Relevance AI": "San Francisco",
+      "Macquarie Group": "New York",
+      "Macquarie": "New York",
+      "Aircall": "New York",
+      "IMC Trading": "Chicago",
+      "Accenture": "many US cities"
+    },
+    "usWords": "(?:(?-i:\\bUS\\b|\\bU\\.S\\.|\\bUSA\\b)|united states|north america|san francisco|new york|seattle|bay area|silicon valley|los angeles|boston|\\baustin\\b)",
+    "signals": [
+      {
+        "name": "usHq",
+        "strength": "company",
+        "note": "The ad says the company is headquartered in the US.",
+        "pattern": "headquartered in {US}|(?:hq|headquarters) (?:is |are )?in {US}|{US}[- ](?:headquartered|hq)"
+      },
+      {
+        "name": "relocation",
+        "strength": "strong",
+        "note": "The ad mentions relocating to the US.",
+        "pattern": "relocat\\w*[^.]{0,80}{US}|{US}[^.]{0,60}relocat"
+      },
+      {
+        "name": "visa",
+        "strength": "strong",
+        "note": "The ad mentions US visa sponsorship.",
+        "pattern": "(?:visa|sponsor\\w*)[^.]{0,80}{US}|{US}[^.]{0,80}(?:visa|sponsor)",
+        "unless": "\\b(?:no|not|unable|cannot|can't|without)\\b[^.]{0,30}(?:visa|sponsor)"
+      },
+      {
+        "name": "travel",
+        "strength": "withCompany",
+        "note": "Involves travel to the US or time with US customers.",
+        "pattern": "(?:travel\\w*|trips?|stints?|visits?)[^.]{0,60}{US}"
+      },
+      {
+        "name": "usTeams",
+        "strength": "withCompany",
+        "note": "Works with US-based teams or customers.",
+        "pattern": "{US}[- ]based|{US} (?:customers|clients|team|teams|headquarters|hq|office|offices|engineering|counterparts|colleagues)|(?:customers|clients|teams?|colleagues|stakeholders) (?:in|across) (?:the )?{US}"
+      },
+      {
+        "name": "mobility",
+        "strength": "withCompany",
+        "note": "Mentions mobility between offices.",
+        "pattern": "global mobility|international mobility|internal mobility|transfer between (?:our )?offices|work (?:from|in) (?:any of )?our (?:global|international|overseas) offices"
+      }
+    ]
+  },
+  "companyAbout": {
+    "Canva": "Canva is the Sydney-founded online design platform used by hundreds of millions of people.",
+    "Atlassian": "Atlassian makes team collaboration software such as Jira and Confluence.",
+    "SafetyCulture": "SafetyCulture makes workplace operations software for inspections, training and safety.",
+    "Mitti by SafetyCulture": "Part of SafetyCulture, which makes workplace operations software for inspections, training and safety.",
+    "Airwallex": "Airwallex is a global payments and financial platform for businesses, founded in Melbourne.",
+    "Xero": "Xero makes cloud accounting software for small businesses.",
+    "SEEK": "SEEK runs Australia's largest online job marketplace.",
+    "Linktree": "Linktree makes the link-in-bio tool used by creators and businesses.",
+    "Zip": "Zip is a buy now, pay later provider operating in Australia and the US.",
+    "WiseTech Global": "WiseTech Global makes CargoWise, logistics software used by freight forwarders worldwide.",
+    "Culture Amp": "Culture Amp makes employee experience software for engagement surveys and performance reviews.",
+    "carsales": "carsales runs online vehicle marketplaces in Australia and overseas.",
+    "Nearmap": "Nearmap provides high-resolution aerial imagery and location data.",
+    "Macquarie Group": "Macquarie is a global financial services group headquartered in Sydney.",
+    "Westpac": "Westpac is one of Australia's four major banks.",
+    "Commonwealth Bank": "Commonwealth Bank is one of Australia's four major banks.",
+    "News Corp Australia": "News Corp Australia publishes major Australian news brands and is part of US-based News Corp.",
+    "Nuix": "Nuix makes investigative analytics and intelligence software used by governments, regulators and companies.",
+    "Amazon Web Services": "Amazon Web Services (AWS) is Amazon's cloud computing business.",
+    "Amazon": "Amazon is the US e-commerce and cloud computing company.",
+    "Salesforce": "Salesforce makes customer relationship management (CRM) software.",
+    "OpenAI": "OpenAI builds ChatGPT and the GPT models.",
+    "Anthropic": "Anthropic builds the Claude AI models.",
+    "Cisco": "Cisco makes networking and security technology. Splunk, which it acquired, makes observability and security software.",
+    "Optimizely": "Optimizely makes digital experience software for content management, experimentation and commerce.",
+    "Aircall": "Aircall makes cloud phone and AI voice software for sales and support teams.",
+    "Accenture": "Accenture is a global IT services and consulting firm.",
+    "GHD": "GHD is a global engineering, architecture and environmental consultancy.",
+    "Betashares": "Betashares is an Australian fund manager specialising in ETFs.",
+    "Southern Cross Austereo": "Southern Cross Austereo is an Australian radio and audio company (Triple M, Hit Network, LiSTNR).",
+    "Kinetic IT": "Kinetic IT is an Australian managed IT services company.",
+    "Databricks": "Databricks makes a data and AI platform built around Apache Spark.",
+    "Stripe": "Stripe makes online payments infrastructure.",
+    "Cognition": "Cognition builds Devin, an autonomous AI software engineer.",
+    "Sierra": "Sierra builds AI agents for customer service.",
+    "Decagon": "Decagon builds AI agents for customer support."
+  },
+  "recruiters": [
+    "Paxus",
+    "M&T Resources",
+    "tekFinder",
+    "Change Recruitment",
+    "Talent Forge Group",
+    "Hays",
+    "Robert Walters",
+    "Randstad",
+    "Hudson",
+    "Michael Page",
+    "Peoplebank",
+    "Hatch",
+    "Harper"
+  ]
+}
