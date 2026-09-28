@@ -54,15 +54,12 @@
     </article>
 
     <article class="proj">
-      <div class="who">TickyTick · Personal product</div>
-      <h3>Local-first task manager with realtime sync</h3>
-      <p>Tasks, calendar planning, habits and focus sessions in one codebase that runs in the browser, installs as a
-        PWA and builds to an Android APK. IndexedDB is the source of truth, so every interaction is instant and works
-        offline; a sync engine pushes changed rows to Supabase Postgres and pulls remote changes back over a realtime
-        websocket, with Row Level Security scoping every row to its user. Includes a Gemini function-calling assistant
-        whose proposed changes are reviewed before they are saved.</p>
-      <div class="stack"><span>React</span><span>TypeScript</span><span>Dexie / IndexedDB</span><span>Supabase</span><span>Postgres
-          RLS</span><span>Realtime</span><span>Capacitor</span><span>PWA</span></div>
+      <div class="who">Fabra · SaaS product</div>
+      <h3>Share-design permissions and email validation</h3>
+      <p>Took over a departing senior engineer's workstream mid-flight and shipped share-design permissions and email
+        validation end to end, front and back, in Fabra's core SaaS product.</p>
+      <div class="stack"><span>React</span><span>TypeScript</span><span>Permissions</span><span>Validation</span><span>Internal
+          tooling</span></div>
     </article>
 
     <article class="proj">
@@ -97,8 +94,6 @@
         <strong>Fabra</strong> <em>— Software Engineer, Sydney</em>
         <ul>
           <li>Built features across Fabra's core SaaS product in React and TypeScript.</li>
-          <li>Took over a departing senior engineer's workstream and shipped share-design permissions and email
-            validation end to end, front and back.</li>
           <li>Wrote internal tooling that cut manual steps out of the team's day-to-day backend operations.</li>
         </ul>
       </div>
@@ -124,6 +119,22 @@
           <li>Built a 2D arcade game embedded in the Yuri&amp;Niels site, and an AR Rube Goldberg machine level for
             GeoArGames.</li>
         </ul>
+      </div>
+    </div>
+
+    <h2>Side projects</h2>
+    <div class="side">
+      <div>
+        <strong>TickyTick</strong> <em>— local-first task manager</em>
+        <p>One React codebase for web, PWA and Android. Offline-first on IndexedDB, synced to Supabase Postgres over a
+          realtime websocket, with Row Level Security per user.</p>
+        <div class="stack"><span>IndexedDB</span><span>Supabase</span><span>Postgres RLS</span></div>
+      </div>
+      <div>
+        <strong>TickyTick assistant</strong> <em>— LLM with a human in the loop</em>
+        <p>Gemini function-calling assistant that only proposes changes; the app validates them and shows them for
+          review before saving.</p>
+        <div class="stack"><span>Gemini</span><span>Function calling</span><span>Edge Functions</span></div>
       </div>
     </div>
 

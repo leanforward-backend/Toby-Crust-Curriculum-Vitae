@@ -12,8 +12,8 @@
 Print-ready PDFs are in `profiles/pdf/`. To rebuild them after editing:
 
 ```bash
-for f in index profiles/*-engineer; do
-  out="profiles/pdf/$(basename "$f").pdf"; [ "$f" = index ] && out=profiles/pdf/general.pdf
+for f in index profiles/*-engineer.html; do
+  f="${f%.html}"; out="profiles/pdf/$(basename "$f").pdf"; [ "$f" = index ] && out=profiles/pdf/general.pdf
   chromium --headless=new --no-pdf-header-footer --virtual-time-budget=8000 --print-to-pdf="$out" "file://$PWD/$f.html"
 done
 ```
