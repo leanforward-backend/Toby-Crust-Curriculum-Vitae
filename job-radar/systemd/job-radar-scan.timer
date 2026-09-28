@@ -1,0 +1,10 @@
+[Unit]
+Description=Run the Job Radar scan every morning
+
+[Timer]
+OnCalendar=*-*-* 06:50:00
+Persistent=true
+RandomizedDelaySec=5min
+
+[Install]
+WantedBy=timers.target

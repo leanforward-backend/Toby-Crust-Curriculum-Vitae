@@ -1,0 +1,10 @@
+[Unit]
+Description=Job Radar dashboard on http://127.0.0.1:8787
+
+[Service]
+WorkingDirectory=@DIR@
+ExecStart=/usr/bin/env python3 @DIR@/server.py --port 8787
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Toby Crust — CV</title>
+  <title>Toby Crust — CV · AI Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="cv.css">
+  <link rel="stylesheet" href="../cv.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
 
     <header class="mast">
       <div class="name" data-echo="Toby Crust">Toby <span class="sur">Crust</span></div>
-      <div class="tag">Software Engineer — AI Workflows · Full-Stack &amp; Integrations · Real-Time Systems</div>
+      <div class="tag">AI Engineer — LLM Agents · Workflow Automation · Internal Tooling</div>
       <div class="contact">
         <span>Sydney, AU</span>
         <span>+61 425 843 487</span>
@@ -26,10 +26,10 @@
         <a href="https://toby-crust-portfolio.vercel.app" target="_blank">toby-crust-portfolio.vercel.app</a>
         <a href="https://www.linkedin.com/in/toby-crust-a6a2a2245/" target="_blank">LinkedIn /toby-crust</a>
       </div>
-      <p class="lede">Software engineer operating across <b>full-stack web applications</b> (React, TypeScript),
-        <b>AI workflow automation</b> (Python, AI agents, Slack API), and <b>real-time systems</b> (Unity, C#). Three
-        years of shipping across SaaS, government, and high-traffic platforms owning products and custom internal tools
-        end-to-end from prototype to production release.
+      <p class="lede">Software engineer building <b>LLM agents and workflow automation</b> that do real work for a
+        team: an agent that turns Slack requests into tested pull requests, and a function-calling assistant that only
+        changes a user's data after they approve it. Backed by three years of <b>full-stack</b> (Python, React,
+        TypeScript) and <b>real-time</b> (Unity, C#) shipping for SaaS, government and nonprofit clients.
       </p>
     </header>
 
@@ -38,7 +38,7 @@
     <article class="proj">
       <div class="who">Slik · AI &amp; Internal Tooling</div>
       <h3>Slack-to-VM AI Agent &amp; Testing Pipeline</h3>
-      <p>Built an internal AI automation pipeline integrated with Slack to accelerate development and non-dev workflows.
+      <p>Built an internal AI automation pipeline integrated with Slack to speed up development and non-dev workflows.
         Non-technical team members specify requested project changes directly in Slack, which dispatches to an AI agent
         that provisions a virtual machine, applies code changes, executes test suites, and alerts me for final PR review
         and merge. Drastically cut routine work and accelerated overall team shipping velocity.</p>
@@ -47,32 +47,27 @@
     </article>
 
     <article class="proj">
-      <div class="who">Slik · Northern Territory Government</div>
-      <h3>Augmented reality heritage app</h3>
-      <p>Shipped a historical WII AR app for the NT Government on iOS and Android, triggering on-site content via BLE
-        beacons and geolocation. Built with Unity Addressables to reduce app store download size and enable modular,
-        dynamic content updates for future expansion. Further locations and experiences are in production now, due to
-        success of initial app.</p>
-      <div class="stack"><span>Unity</span><span>C#</span><span>AR Foundation</span><span>ARKit / ARCore</span><span>BLE
-          beacons</span><span>Addressables</span><span>Localization</span><span>Convai</span></div>
+      <div class="who">TickyTick · Personal product</div>
+      <h3>Function-calling assistant with human review</h3>
+      <p>In-app AI assistant for TickyTick, my local-first task manager, built on Gemini function calling. The model
+        never writes to the database: it calls one <code>propose_items</code> function, and the app validates the
+        proposal, resolves names to real rows and shows it for review before anything is saved. Row ids never leave
+        the device, and the prompt is ordered so the static rules and data snapshot reuse Gemini's implicit prefix
+        cache, with only the timestamp changing per call. Served through a Supabase Edge Function with a usage quota.
+      </p>
+      <div class="stack"><span>TypeScript</span><span>Gemini API</span><span>Function Calling</span><span>Prompt
+          Caching</span><span>Supabase Edge Functions</span><span>Deno</span><span>React</span></div>
     </article>
 
     <article class="proj">
-      <div class="who">Slik · FightMND</div>
-      <h3>Donation platform</h3>
-      <p>Full-stack build of the donation site for a national fundraising campaign — payment flow, supporter data
-        capture and a front end that held up under broadcast-driven traffic spikes.</p>
-      <div class="stack"><span>React</span><span>TypeScript</span><span>Stripe</span><span>Netlify</span></div>
-      <div class="metrics">
-        <div class="metric">
-          <div class="n"><span class="highlight">$165,575</span></div>
-          <div class="l">Raised through the platform</div>
-        </div>
-        <div class="metric">
-          <div class="n"><span class="highlight">8.9K</span></div>
-          <div class="l">Peak concurrent viewers</div>
-        </div>
-      </div>
+      <div class="who">Slik · Northern Territory Government</div>
+      <h3>AR heritage app with conversational characters</h3>
+      <p>Lead developer on a historical WWII AR app for the NT Government on iOS and Android, triggering on-site
+        content via BLE beacons and geolocation, with Convai-powered conversational characters. Built with Unity
+        Addressables to keep the download small and ship new content without a full release. Further locations are in
+        production now, due to the success of the first.</p>
+      <div class="stack"><span>Unity</span><span>C#</span><span>Convai</span><span>AR Foundation</span><span>BLE
+          beacons</span><span>Addressables</span></div>
     </article>
 
     <h2>Experience</h2>
@@ -82,10 +77,11 @@
       <div class="what">
         <strong>Slik</strong> <em>— Software Engineer, Sydney</em>
         <ul>
-          <li>Lead developer on the NT Government AR app, from Unity build through to App Store Connect and Play Console
-            release.</li>
           <li>Built custom internal Slack-to-VM AI agent workflows to automate stakeholder requests, code modifications,
             and testing pipelines.</li>
+          <li>Automated content and data pipelines with GitHub Actions and DigitalOcean Spaces.</li>
+          <li>Lead developer on the NT Government AR app, from Unity build through to App Store Connect and Play Console
+            release.</li>
         </ul>
       </div>
     </div>
@@ -95,10 +91,10 @@
       <div class="what">
         <strong>Fabra</strong> <em>— Software Engineer, Sydney</em>
         <ul>
-          <li>Built features across Fabra's core SaaS product in React and TypeScript.</li>
+          <li>Wrote internal tooling that cut manual steps out of the team's day-to-day backend operations.</li>
           <li>Took over a departing senior engineer's workstream and shipped share-design permissions and email
             validation end to end, front and back.</li>
-          <li>Wrote internal tooling that cut manual steps out of the team's day-to-day backend operations.</li>
+          <li>Built features across Fabra's core SaaS product in React and TypeScript.</li>
         </ul>
       </div>
     </div>
@@ -126,44 +122,60 @@
       </div>
     </div>
 
+    <h2>Side projects</h2>
+    <div class="side">
+      <div>
+        <strong>Holo Box</strong> <em>— Slik R&amp;D</em>
+        <p>Holographic display that tracks the viewer's head with machine learning and renders through an off-axis
+          frustum, so a flat screen reads as real depth.</p>
+        <div class="stack"><span>ML head tracking</span><span>Unity</span><span>Off-axis projection</span></div>
+      </div>
+      <div>
+        <strong>Hexapod robot</strong> <em>— robotics</em>
+        <p>Six-legged walking robot: Arduino firmware with inverse kinematics, driven over WiFi from a three.js leg
+          editor through a Python bridge.</p>
+        <div class="stack"><span>Python</span><span>C++</span><span>three.js</span><span>ESP8266</span></div>
+      </div>
+    </div>
+
     <h2>Toolkit</h2>
     <div class="grid">
       <div>
         <h4>Languages</h4>
         <ul>
-          <li>TypeScript / JavaScript</li>
           <li>Python</li>
+          <li>TypeScript / JavaScript</li>
           <li>C#</li>
           <li>C++</li>
         </ul>
       </div>
       <div>
-        <h4>AI &amp; Workflows</h4>
+        <h4>AI &amp; LLMs</h4>
         <ul>
-          <li>AI Agents / LLMs</li>
+          <li>AI Agents</li>
+          <li>Function Calling / Tool Use</li>
+          <li>Prompt Engineering</li>
+          <li>Gemini API</li>
+          <li>Convai</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Automation</h4>
+        <ul>
           <li>Slack API &amp; Webhooks</li>
           <li>VM Automation</li>
+          <li>GitHub Actions</li>
           <li>Automated Testing</li>
-          <li>Prompt Engineering</li>
+          <li>CI/CD</li>
         </ul>
       </div>
       <div>
-        <h4>Web &amp; Integrations</h4>
+        <h4>Platforms</h4>
         <ul>
           <li>React</li>
-          <li>Stripe</li>
+          <li>Supabase</li>
           <li>REST APIs</li>
-          <li>ESP Integrations</li>
           <li>Netlify / Vercel</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Ship &amp; Operate</h4>
-        <ul>
-          <li>GitHub Actions</li>
-          <li>Git Version Control</li>
-          <li>App Store Connect</li>
-          <li>Google Play Console</li>
           <li>DigitalOcean Spaces</li>
         </ul>
       </div>

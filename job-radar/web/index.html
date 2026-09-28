@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Job Radar — Toby Crust</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="mast">
+      <div class="eyebrow" id="eyebrow">Toby Crust · Sydney</div>
+      <h1 class="name" data-echo="Job Radar">Job <span class="sur">Radar</span></h1>
+      <div class="metarow">
+        <p class="meta" id="meta">Loading your job list…</p>
+        <button class="refresh" id="refresh" type="button">Scan now</button>
+      </div>
+    </header>
+
+    <section class="kpis" aria-label="Summary">
+      <div class="kpi"><div class="n accent" id="k-new">–</div><div class="l">New today</div></div>
+      <div class="kpi"><div class="n" id="k-strong">–</div><div class="l">Strong matches · 60+</div></div>
+      <div class="kpi"><div class="n" id="k-saved">–</div><div class="l">Saved</div></div>
+      <div class="kpi"><div class="n" id="k-applied">–</div><div class="l">Applied</div></div>
+      <div class="kpi spark">
+        <svg id="spark" viewBox="0 0 280 38" preserveAspectRatio="none" role="img" aria-label="New roles found per day"></svg>
+        <div class="axis"><span id="spark-from"></span><span class="l">New roles per day</span><span>Today</span></div>
+      </div>
+    </section>
+
+    <nav class="sections" id="sections" aria-label="Sections"></nav>
+
+    <section class="usintro" id="usintro" hidden>
+      <h2>Sydney roles that can lead to a job in the US</h2>
+      <p>Every role here still fits your Sydney filters. Each one also has at least one route to working in America:</p>
+      <ul>
+        <li><b>Internal transfer.</b> At a US-headquartered company, or an Australian one with US offices, the usual route is an
+          L-1 visa transfer, which needs 12 months with the company first.</li>
+        <li><b>US-facing work.</b> Roles that work with US teams or customers, or travel there, build the network and track
+          record US hiring managers look for.</li>
+        <li><b>Relocation or sponsorship.</b> The ad itself mentions moving to the US or sponsoring a US visa. These are marked
+          <em>Strong</em>.</li>
+      </ul>
+      <p class="fine">If you hold Australian citizenship, the E-3 visa also lets US employers hire you directly. It isn't open to
+        other nationalities, including New Zealanders.</p>
+    </section>
+
+    <section class="controls" aria-label="Filters">
+      <div class="tabs" role="tablist" id="tabs"></div>
+      <div class="filters">
+        <div class="fgroup" id="f-track"><span class="flabel">Track</span></div>
+        <div class="fgroup" id="f-mode"><span class="flabel">Work mode</span></div>
+        <div class="fgroup" id="f-min"><span class="flabel">Match</span></div>
+        <div class="fgroup" id="f-posted"><span class="flabel">Posted</span></div>
+      </div>
+      <div class="searchrow">
+        <input class="search" id="q" type="search" placeholder="Search title, company, skill…" aria-label="Search jobs">
+        <select class="sort" id="sort" aria-label="Sort order">
+          <option value="score">Best match first</option>
+          <option value="new">Newest first</option>
+        </select>
+      </div>
+    </section>
+
+    <div class="count" id="count"></div>
+    <ol class="jobs" id="jobs"></ol>
+    <div class="empty" id="empty" hidden></div>
+
+    <details class="how">
+      <summary>How roles are found and matched</summary>
+      <ul>
+        <li>A scan runs every morning at 7am. It reads LinkedIn's public job search and about 100 company job boards for forward deployed, AI and automation, full-stack and XR roles.</li>
+        <li>Only roles based in Greater Sydney are kept: onsite, hybrid, or <em>flexible</em> (tied to a Sydney office but remote-friendly, as Canva and Atlassian list most roles). Fully remote roles, senior, lead, staff and principal titles, and roles asking for more than <span id="maxYears">4</span> years are left out.</li>
+        <li>Company boards cover the main Australian tech companies (Atlassian, Canva, SafetyCulture, Airwallex, Xero, SEEK, Linktree, Zip, WiseTech, Culture Amp and more), US tech firms with Sydney offices (Amazon, Salesforce, OpenAI, Databricks and others), and Sydney startups.</li>
+        <li>Each role is read in full and matched against the skills in your CVs. The note under each role names the work of yours it draws on. The score (0–100) rises with that overlap and falls for things you haven't shown, such as Java, .NET, clearance or pre-sales quotas.</li>
+        <li>60+ is a strong match, 50–59 is worth a look, and 45–49 is a stretch. Roles below 45 aren't shown.</li>
+        <li>Matching rules live in <code>job-radar/profile.json</code>. Edit it and run <code>python3 scan.py --rescore</code> to apply the changes.</li>
+      </ul>
+    </details>
+  </div>
+  <div class="toast" id="toast" hidden role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+
+</html>
